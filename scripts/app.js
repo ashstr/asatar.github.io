@@ -2,7 +2,7 @@
 angular.module('main', ['ui.router']).config(function ($stateProvider, $urlRouterProvider) {
 
 	// ROUTING with ui.router
-	$urlRouterProvider.otherwise('/main/list');
+	$urlRouterProvider.otherwise('/main/resume');
 	$stateProvider
 	// this state is placed in the <ion-nav-view> in the index.html
 		.state('main', {
@@ -11,8 +11,8 @@ angular.module('main', ['ui.router']).config(function ($stateProvider, $urlRoute
 			templateUrl: 'main/templates/menu.html',
 			controller: 'MenuCtrl as menu'
 		})
-		.state('main.list', {
-			url: '/list',
+		.state('main.resume', {
+			url: '/resume',
 			views: {
 				'pageContent': {
 					templateUrl: 'main/templates/resume.html',
@@ -404,6 +404,9 @@ angular.module('main').controller('MenuCtrl', function ($scope, CVInfo) {
 angular.module('main').constant('CVInfo', {
 	'personalInfo': {
 		'name': 'Ashraf Abd Elsatar',
+		'pic': 'main/assets/images/me.png',
+		'title': 'Software Developer',
+		'bio': 'I am a Software Developer for hybrid (cross platform) mobile applications and Web 2.0 applications. Although I am currently invested in developing IBM MobileFirst applications primarily using JavaScript and its fellow frameworks (AngularJS, Ionic, NGCordova, jQuery Mobile, Apache Cordova, Dojo Mobile), I like to think of myself as a generalist Software Engineer. I have used Java EE technologies for quite a while before that (JSP, Servlets, JDBC, EJBs, JSF). I also have hands on experience with NodeJS and its awesome wave of tools.',
 		'mobile': '(+20)-122-789-8935',
 		'email': 'ashraf.elkoly@gmail.com',
 		'street': '43 khalil abu yossef',
@@ -411,27 +414,20 @@ angular.module('main').constant('CVInfo', {
 		'zone': 'Faisal, Giza, Egypt',
 		'postal': '12111',
 	},
-	'skills': [
-		{
-			'name': 'Java/EE',
-			'score': '70'
-		},
-		{
-			'name': 'Javascript',
-			'score': '90'
-		},
-		{
-			'name': 'AngularJs',
-			'score': '90'
-		},
-		{
-			'name': 'NodeJs',
-			'score': '90'
-		},
-
-	]
+	'skills': [{
+		'name': 'Java/EE',
+		'score': '70'
+	}, {
+		'name': 'Javascript',
+		'score': '90'
+	}, {
+		'name': 'AngularJs',
+		'score': '90'
+	}, {
+		'name': 'NodeJs',
+		'score': '90'
+	}]
 });
-
 
 'use strict';
 angular.module('asatar', ['main']);

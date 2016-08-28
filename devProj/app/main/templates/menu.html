@@ -18,7 +18,7 @@
                                       IMAGE   
                             ==========================-->
 					<div class="feature-img">
-						<a href="index.html"><img src="assets/images/profile-img.jpg" class="responsive-img" alt=""></a>
+						<a href="index.html"><img ng-src="{{CVInfo.personalInfo.pic}}" class="responsive-img" alt=""></a>
 					</div>
 					<!-- =========================================
                                        NAVIGATION   
@@ -41,9 +41,9 @@
                                        NAME AND TAGLINE
                             ==========================================-->
 					<div class="title col s12 m12 l9 right  wow fadeIn" data-wow-delay="0.1s">
-						<h2>{{personalInfo.name}}</h2>
+						<h2>{{CVInfo.personalInfo.name}}</h2>
 						<!-- title name -->
-						<span>UI & UX Expert</span>
+						<span>{{CVInfo.personalInfo.title}}</span>
 						<!-- tagline -->
 					</div>
 				</div>
@@ -57,7 +57,7 @@
 						<div class="col m12 s12 l9 info wow fadeIn a1" data-wow-delay="0.1s">
 							<!-- text -->
 							<div class="section-item-details">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua . Ld do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+								<p>{{CVInfo.personalInfo.bio}}</p>
 							</div>
 						</div>
 					</div>

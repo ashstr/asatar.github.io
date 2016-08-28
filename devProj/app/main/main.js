@@ -2,7 +2,7 @@
 angular.module('main', ['ui.router']).config(function ($stateProvider, $urlRouterProvider) {
 
 	// ROUTING with ui.router
-	$urlRouterProvider.otherwise('/main/list');
+	$urlRouterProvider.otherwise('/main/resume');
 	$stateProvider
 	// this state is placed in the <ion-nav-view> in the index.html
 		.state('main', {
@@ -11,8 +11,8 @@ angular.module('main', ['ui.router']).config(function ($stateProvider, $urlRoute
 			templateUrl: 'main/templates/menu.html',
 			controller: 'MenuCtrl as menu'
 		})
-		.state('main.list', {
-			url: '/list',
+		.state('main.resume', {
+			url: '/resume',
 			views: {
 				'pageContent': {
 					templateUrl: 'main/templates/resume.html',
