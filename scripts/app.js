@@ -16,7 +16,7 @@ angular.module('main', ['ui.router']).config(function ($stateProvider, $urlRoute
 			views: {
 				'pageContent': {
 					templateUrl: 'main/templates/resume.html',
-					// controller: '<someCtrl> as ctrl'
+					controller: 'ResumeCtrl as ctrl'
 				}
 			}
 		})
@@ -38,6 +38,12 @@ angular.module('main', ['ui.router']).config(function ($stateProvider, $urlRoute
 				}
 			}
 		});
+});
+'use strict';
+angular.module('main').controller('ResumeCtrl', function($scope, CVInfo) {
+	$scope.CVInfo = CVInfo;
+
+
 });
 'use strict';
 angular.module('main').controller('MenuCtrl', function ($scope, CVInfo) {
@@ -426,6 +432,40 @@ angular.module('main').constant('CVInfo', {
 	}, {
 		'name': 'NodeJs',
 		'score': '90'
+	}],
+	'education': [{
+
+	}],
+	'experiance': [{
+		'company': 'IBM',
+		'jobTitle': 'Software Engineer - Wimbledon',
+		'date': 'Nov 2015 - May 2016',
+		'info': 'Wimbledon player portal allows the championship players to track their progress and check there awards and also they can check there allowances like food and stringing. Integrated our portal with Wimbledon systems through MuleSoft ESB and also developed the portal feature as frontend end and back end Technologies: AngularJS, NodeJs, Karma, Mulesoft, JAX-RS, DB2'
+	}, {
+		'company': 'Sumerge',
+		'jobTitle': 'Software Engineer - TEData Web Portal',
+		'date': 'Sep 2015 - Nov 2015',
+		'info': 'Develop one portal for TEdata and Egyptian Telecommunication (ET) and migrate the services from the ET to Tedata portal allows the users to subscribe for the land line with ADSL service. Developed and designed the portal web2.0 portlets and integrate the backend services with Tedata and ET services through IBM broker Technologies: AngularJS, JAX-RS, JAX-WS, Hibernate, IBM Websphere Portal'
+	}, {
+		'company': 'Sumerge',
+		'jobTitle': 'Software Engineer - Egyptian Gulf Bank Mobile Application',
+		'date': 'Jun 2015 - Sep 2015',
+		'info': 'A Hybrid Mobile application for Emirates Bank allowing users to check their balance, pay their credits cards, transfer between different accounts. Led a team and developed the mobile modules, the backend part and integrating it with the backend services Technologies: AngularJS, Ionic, NGCodrova, Apache Cordova'
+	}, {
+		'company': 'Sumerge',
+		'jobTitle': 'Software Engineer - CityStars Mobile Application',
+		'date': 'Mar 2015 - Jun 2015',
+		'info': 'A Hybrid Mobile application for CityStars Mall providing the users with creative indoor navigation and display the stores adds while the users walking inside the mall and also display the latest news of the mall from event and cinemas. Developed and designed the mobile application and integrate it with indoor atlas framework Technologies: AngularJS, Ionic, NGCodrova, Indoor Atlas, Apache Codrova'
+	}, {
+		'company': 'Sumerge',
+		'jobTitle': 'Software Engineer - Bank Misr',
+		'date': 'Nov 2014 - Mar 2015',
+		'info': 'ECM and BPM solution to automate the workflow of letter of guarantees (LG) and mutual funds (MF) for Banque Misr, one of the largest banks in Egypt. The solution included core banking system integration and document archiving. Developed and designed the bank modules and integrate it with IBM BPM Technologies: EJB3.0, JSf 1.2, IBM WAS 7.0, Orcale 11g, IBM AIX, MS AD,'
+	}, {
+		'company': 'Sumerge',
+		'jobTitle': 'Software Engineer - Bank Misr',
+		'date': 'Nov 2014 - Mar 2015',
+		'info': 'ECM and BPM solution to automate the workflow of letter of guarantees (LG) and mutual funds (MF) for Banque Misr, one of the largest banks in Egypt. The solution included core banking system integration and document archiving. Developed and designed the bank modules and integrate it with IBM BPM Technologies: EJB3.0, JSf 1.2, IBM WAS 7.0, Orcale 11g, IBM AIX, MS AD,'
 	}]
 });
 

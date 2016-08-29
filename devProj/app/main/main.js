@@ -16,7 +16,7 @@ angular.module('main', ['ui.router']).config(function ($stateProvider, $urlRoute
 			views: {
 				'pageContent': {
 					templateUrl: 'main/templates/resume.html',
-					// controller: '<someCtrl> as ctrl'
+					controller: 'ResumeCtrl as ctrl'
 				}
 			}
 		})

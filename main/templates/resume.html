@@ -11,21 +11,11 @@
 			<div class="custom-content col s12 m12 l10 wow fadeIn a1" data-wow-delay="0.1s">
 				<h2>Work Experience</h2>
 
-				<div class="custom-content-wrapper wow fadeIn a2" data-wow-delay="0.2s">
-					<h3>UI/UX Designer <span>@Academy</span></h3>
-					<span>JAN 2013 - DEC 2013 </span>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-				</div>
-				<div class="custom-content-wrapper wow fadeIn a3" data-wow-delay="0.3s">
-					<h3>Creative Director <span>@DeviserWeb</span></h3>
-					<span>JAN 2013 - DEC 2013 </span>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-				</div>
-				<div class="custom-content-wrapper wow fadeIn a4" data-wow-delay="0.4s">
-					<h3>Graphics Designer <span>@Creative Wrold</span></h3>
-					<span>JAN 2013 - DEC 2013 </span>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-				</div>
+				<div ng-repeat="exp in CVInfo.experiance" class="custom-content-wrapper wow fadeIn a2" data-wow-delay="0.2s">
+					<h3>{{exp.jobTitle}} <span>@{{exp.company}}</span></h3>
+					<span>{{exp.date}} </span>
+					<p>{{exp.info}} </p>					
+				</div>				
 			</div>
 		</div>
 
@@ -83,7 +73,7 @@
                           portfolio Website
                         ==========================================-->
 
-		<div class="section-wrapper z-depth-1 wow fadeIn" data-wow-delay="0.1s">
+		<div class="section-wrapper z-depth-1 wow fadeIn" data-wow-delay="0.1s" ng-show="false">
 			<div class="col s12 m12 l10 website right">
 				<div class="row">
 					<div class="col s12 m12 l6">
