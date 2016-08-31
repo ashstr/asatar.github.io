@@ -26,7 +26,10 @@ angular.module('main').constant('CVInfo', {
 		'score': '90'
 	}],
 	'education': [{
-
+		'degree': 'Bachelor degree in Computer Science',
+		'college': 'Arab Academy For Science, Technology ',
+		'date': 'Sep 2008 - Aug 2012',
+		'info': 'Excellent grade with honor class. GPA: 3.84/4.0,Graduation project: “Space missions simulator”, Using Matlab, Mysql. Grade: A+'
 	}],
 	'experiance': [{
 		'company': 'IBM',
